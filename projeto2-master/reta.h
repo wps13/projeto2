@@ -5,9 +5,17 @@
 
 class Reta : public FiguraGeometrica
 {
+    //pontos iniciais da reta
     int x0,y0;
+    //pontos finais da reta
     int x1,y1;
+    /* tam=tamanho da reta
+     * deltaX=calcula a distância entre os X's e divide pelo tam
+     */
     int tam,deltaX, deltaY;
+    /* m = coeficiente angular da reta
+     *
+*/
     int i,x,y,m,e;
 
 public:

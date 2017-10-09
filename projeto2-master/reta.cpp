@@ -6,10 +6,10 @@ using namespace std;
 
 /**
  * @brief Reta::Reta
- * @param x0
- * @param y0
- * @param x1
- * @param y1
+ * @param _x0
+ * @param _y0
+ * @param _x1
+ * @param _y1
  */
 Reta::Reta(int x0, int y0, int x1, int y1)
 {
@@ -42,3 +42,4 @@ void Reta::draw(Screen &t)
     }
 }
 
+//http://agostinhobritojr.github.io/cursos/cg/linhas.html#(8)
