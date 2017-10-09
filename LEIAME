@@ -1,0 +1,10 @@
+Coisas que faltam fazer:
+
+Implementação da classe figuraGeometrica(parecido com o que foi visto em sala)
+Testar objetos ja criados(circulo etc) 
+Corrigir possíveis erros de preenchimento das figuras (?)
+Realizar leitura de arquivo.txt (DICA: tem info sobre isso no drive)
+Implementar main.cpp
+
+
+Quando mexer no git,selecionar todos os arquivos da pasta e joga-los selecionados na parte de upload
