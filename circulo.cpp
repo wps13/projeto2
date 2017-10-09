@@ -10,8 +10,11 @@ Circulo::Circulo(int x, int y, int r)
     d = (1- raio);
 }
 
+//desenha a circuferência com base no algoritmo de bresenham
+//necessário verificar se preenche, o que não acho que faça
 void Circulo::draw(Screen &t)
 {
+
     t.setPixel(x,y+y1);
     t.setPixel(x,y-y1);
     t.setPixel(x+y1,y);

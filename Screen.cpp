@@ -24,6 +24,7 @@ Screen::Screen(int nlin, int ncol)
 }
 
 //coloca o caractere selecionado na posição dada
+//caso a mesma seja dentro da tela
 void Screen::setPixel(int x, int y)
 {
     if(x<=nlin && y<=ncol)
