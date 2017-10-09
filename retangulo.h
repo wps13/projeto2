@@ -6,9 +6,11 @@
 class Retangulo : public FiguraGeometrica
 {
 private:
-    int x,y, lar,alt;
+    int lar,alt;
+    int x0,y0;
+    int i,j;
 public:
-    Retangulo(int x,int y,int lar,int alt);
+    Retangulo(int x0,int y0,int lar,int alt);
     void draw(Screen &t);
 };
 

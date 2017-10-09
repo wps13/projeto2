@@ -7,7 +7,7 @@ Circulo::Circulo(int x, int y, int r)
     raio=r;
     x1=0;
     y1=raio;
-    diametro = (1- raio);
+    d = (1- raio);
 }
 
 void Circulo::draw(Screen &t)

@@ -42,3 +42,4 @@ void Reta::draw(Screen &t)
     }
 }
 
+//http://agostinhobritojr.github.io/cursos/cg/linhas.html#(8)
