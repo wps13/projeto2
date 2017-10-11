@@ -1,19 +1,21 @@
 #include "circulo.h"
 
-Circulo::Circulo(int x, int y, int r)
+Circulo::Circulo(int x, int y, int r,int fill)
 {
     this->x=x;
     this->y=y;
+    this->fill=fill;
     raio=r;
-    x1=0;
-    y1=raio;
-    d = (1- raio);
+
 }
 
 //desenha a circuferência com base no algoritmo de bresenham
 //necessário verificar se preenche, o que não acho que faça
 void Circulo::draw(Screen &t)
 {
+    x1=0;
+    y1=raio;
+    d = (1- raio);
 
     t.setPixel(x,y+y1);
     t.setPixel(x,y-y1);
@@ -30,6 +32,15 @@ void Circulo::draw(Screen &t)
             x1+= 1;
             y1-=1;
         }
+
+        if(fill==1)
+        {
+            for(int i=(x+x1-raio);i<x+raio;i++)
+                for(int j=(y-raio);j<y+raio;j++)
+                    t.setPixel(i,j);
+
+
+        }
         t.setPixel(x+x1,y+y1);
         t.setPixel(x+x1,y-y1);
         t.setPixel(y1+x,x1+y);
@@ -38,6 +49,7 @@ void Circulo::draw(Screen &t)
         t.setPixel(x-x1,y-y1);
         t.setPixel(x-y1,y-x1);
         t.setPixel(x-y1,x1+y);
+
     }
 
 }

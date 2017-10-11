@@ -22,9 +22,10 @@ int main()
 
 
 
-    figuras.push_back(new Reta(8,8,19,19));
+    //figuras.push_back(new Reta(8,8,19,19));
     //figuras.push_back(new Retangulo(10,10,2,5));
-    figuras.push_back(new Circulo(5,5,3));
+    figuras.push_back(new Circulo(3,15,3,0));
+    figuras.push_back(new Circulo(3,7,3,1));
 
     for(int i=0;i<figuras.size();i++){
        figuras[i]->draw(tela);
