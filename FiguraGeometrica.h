@@ -4,6 +4,7 @@
 
 class FiguraGeometrica
 {
+
 public:
     //! Construtor da classe
     //! Irá criar a matriz de figuras geométricas

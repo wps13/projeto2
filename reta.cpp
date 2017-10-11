@@ -11,48 +11,64 @@ using namespace std;
  * @param _x1
  * @param _y1
  */
-Reta::Reta(int x0, int y0, int x1, int y1)
+Reta::Reta(int x1, int y1, int x2, int y2)
 {
     //inicializa as variáveis
-    this->x0=x0;
     this->x1=x1;
-    this->y0=y0;
     this->y1=y1;
+    this->x2=x2;
+    this->y2=y2;
+}
 
-    //calcula o tamanho à partir das maiores posições
-    if(abs(x1-x0) > abs(y1-y0))
-        tam=abs(x1-x0);
+int Sinal(int x){
+    if(x == 0)
+        return 0;
+    else if(x > 0)
+        return 1;
     else
-        tam = abs(y1-y0);
-
-    deltaX =(x1-x0)/tam;
-    deltaY = (y1-y0)/tam;
-
-    //cálculo do coeficiente angular
-    m= deltaY/deltaX;
-
-    //cálculo do erro entre coordenada e ponto de rasterização
-    //rasterização: definição do pixel a ser desenhado
-    e= m - (1/2);
-
-    //define as coordenadas iniciais a serem desenhadas
-    x = x + deltaX;
-    y = y+deltaY;
+        return -1;
 }
 
 void Reta::draw(Screen &t)
 {    
-    for(i=1;i<=deltaX;i++)
-    {
-        //round : força o número a ser inteiro
-        //define os pixels variando as posições com o loop
-        t.setPixel(round(x),round(y));
-        while(e >= 0){
-            y+=1;
-            e-=1;
+    int x, y, s1, s2,Troca,Temp;
+    x = x1;
+    y = y1;
+    Delta_x = abs(x2 - x1);
+    Delta_y = abs(y2 - y1);
+    s1=Sinal(x2 - x1);
+    s2=Sinal(y2 - y1);
+    if(Delta_y > Delta_x){
+        Temp = Delta_x;
+        Delta_x = Delta_y;
+        Delta_y = Temp;
+        Troca = 1;
+    }
+    else{
+        Troca = 0;
+    }
+    new_e = 2*Delta_y - Delta_x;
+    for(i=1; i<= Delta_x; i++){
+        t.setPixel(x,y);
+        while (new_e >= 0){
+            if(Troca == 1){
+                //Muda para a proxima linha de rasterização
+                x = x + s1;
+            }
+            else{
+                y = y + s2;
+            }
+            new_e = new_e - 2*Delta_x;
         }
-        x+=1;
-        e+=m;
+
+        //Permanece nesta linha de rasterização
+        if(Troca == 1){
+            y = y + s2;
+        }
+        else{
+            x = x + s1;
+        }
+        new_e= new_e + 2*Delta_y;
     }
 }
 

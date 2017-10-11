@@ -11,24 +11,16 @@ Screen::Screen(int nlin, int ncol)
     this->ncol=ncol;
 
     //reserva espaço na memória para matriz de vetores
-    mat = vector< vector<char> >(nlin,vector<char>(ncol,0));
-
-    //preenche a matriz com o caractere '|'
-    for(int i=0;i<nlin;i++)
-    {
-        for(int j=0;j<ncol;j++)
-        {
-            mat[i][j] = '|';
-        }
-    }
+    mat = vector< vector<char> >(nlin,vector<char>(ncol,' '));
 }
 
 //coloca o caractere selecionado na posição dada
 //caso a mesma seja dentro da tela
 void Screen::setPixel(int x, int y)
 {
-    if(x<=nlin && y<=ncol)
-    mat[x][y] = brush;
+    if(x>=0 && y >=0 && x<nlin && y<ncol){
+        mat[x][y] = brush;
+    }
 }
 
 //reseta a matriz para o caractere inicial
@@ -38,7 +30,7 @@ void Screen::clear()
     {
         for(int j=0;j<ncol;j++)
         {
-            mat[i][j] = '|' ;
+            mat[i][j] = ' ' ;
         }
     }
 }
@@ -59,6 +51,7 @@ ostream& operator<<(ostream &os, Screen &t)
         {
             os<<t.mat[i][j];
         }
+        os << endl;
     }
     return os;
 }
