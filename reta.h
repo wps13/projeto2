@@ -21,7 +21,7 @@ class Reta : public FiguraGeometrica
 
 public:
     //! construtor do objeto
-    //! recebe as coordenadas dos pontos inicial(x0,y0) e final(x1,y1)
+    //! recebe as coordenadas dos pontos inicial(x1,y1) e final(x2,y2)
     Reta(int x1, int y1, int x2, int y2);
 
     //! desenha a reta na tela à partir do algoritmo de bresenham

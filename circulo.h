@@ -15,11 +15,11 @@ private:
 
 public:
     //! construtor do circulo
-    //! Inicia o objeto à partir do ponto inicial(x,y) e raio(r)
+    //! Inicia o objeto à partir do ponto inicial(x,y) e raio(r).
     //! Fill indica se o circulo deve ser preenchido com o caractere ou não
     Circulo(int x, int y, int r,int fill);
 
-    //! metódo para desenhar e preencher o circulo na tela
+    //! Método para desenhar e preencher o circulo na tela
     void draw(Screen &t);
 };
 

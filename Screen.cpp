@@ -3,7 +3,11 @@
 #include <vector>
 
 using namespace std;
-
+/**
+ * @brief Screen::Screen
+ * @param nlin
+ * @param ncol
+ */
 Screen::Screen(int nlin, int ncol)
 {
     //inicia as variáveis das linhas e colunas
@@ -16,6 +20,11 @@ Screen::Screen(int nlin, int ncol)
 
 //coloca o caractere selecionado na posição dada
 //caso a mesma seja dentro da tela
+/**
+ * @brief Screen::setPixel
+ * @param x
+ * @param y
+ */
 void Screen::setPixel(int x, int y)
 {
     if(x>=0 && y >=0 && x<nlin && y<ncol){
@@ -24,6 +33,9 @@ void Screen::setPixel(int x, int y)
 }
 
 //reseta a matriz para o caractere inicial
+/**
+ * @brief Screen::clear
+ */
 void Screen::clear()
 {
     for(int i=0;i<nlin;i++)
@@ -36,6 +48,10 @@ void Screen::clear()
 }
 
 //define o caractere dado como o pincel
+/**
+ * @brief Screen::setBrush
+ * @param brush
+ */
 void Screen::setBrush(char brush)
 {
     this->brush = brush;
@@ -43,6 +59,12 @@ void Screen::setBrush(char brush)
 
 //sobrecarga do operador <<
 //funciona como uma função para imprimir
+/**
+ * @brief operator <<
+ * @param os
+ * @param t
+ * @return
+ */
 ostream& operator<<(ostream &os, Screen &t)
 {
     for(int i=0;i<t.nlin;i++)

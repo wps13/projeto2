@@ -26,16 +26,17 @@ public:
     //! Inicializa a matriz com o número de linhas e colunas dados pelo usuário
     Screen(int nlin=1, int ncol=1);
 
-    //! desenha um pixel da matriz usando o caratere guardado em 'brush'
+    //! Desenha um pixel da matriz usando o caratere guardado em 'brush'
     void setPixel(int x, int y);
 
-    //! limpa a tela
+    //! Limpa a tela, colocando todos os pixels no caractere inicial(espaço)
     void clear();
 
     //! muda o caractere de desenho
     void setBrush(char brush);
 
-    //! envia a tela para um stream de saida
+    //! Envia a tela para um stream de saida, que permite o uso do cout para exibição da tela, invés
+    //! de usar um método a ser implementado na classe
    friend ostream& operator<<(ostream &os, Screen &t);
 };
 

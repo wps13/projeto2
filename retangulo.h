@@ -15,10 +15,10 @@ private:
 
 public:
     //! construtor do objeto "retângulo"
-    //! recebe o ponto superior esquerdo,largura e altura
+    //! recebe o ponto superior esquerdo,largura(lar) e altura(alt)
     Retangulo(int x0,int y0,int lar,int alt);
 
-    //! Implementação para desenhar o retângulo na tela
+    //! Implementação para desenhar o retângulo na tela(t)
     void draw(Screen &t);
 };
 

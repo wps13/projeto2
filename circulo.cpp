@@ -1,5 +1,11 @@
 #include "circulo.h"
-
+/**
+ * @brief Circulo::Circulo
+ * @param x
+ * @param y
+ * @param r
+ * @param fill
+ */
 Circulo::Circulo(int x, int y, int r,int fill)
 {
     this->x=x;
@@ -9,8 +15,10 @@ Circulo::Circulo(int x, int y, int r,int fill)
 
 }
 
-//desenha a circuferência com base no algoritmo de bresenham
-//necessário verificar se preenche, o que não acho que faça
+/**
+ * @brief Circulo::draw
+ * @param t
+ */
 void Circulo::draw(Screen &t)
 {
     x1=0;

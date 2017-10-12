@@ -1,5 +1,11 @@
 #include "retangulo.h"
-
+/**
+ * @brief Retangulo::Retangulo
+ * @param x0
+ * @param y0
+ * @param lar
+ * @param alt
+ */
 Retangulo::Retangulo(int x0, int y0, int lar, int alt)
 {
     //inicia as variáveis
@@ -10,6 +16,10 @@ Retangulo::Retangulo(int x0, int y0, int lar, int alt)
 }
 
 //preenche todas as posições dadas com o caractere selecionado
+/**
+ * @brief Retangulo::draw
+ * @param t
+ */
 void Retangulo::draw(Screen &t)
 {
     i=0;
