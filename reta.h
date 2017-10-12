@@ -12,12 +12,12 @@ class Reta : public FiguraGeometrica
     /* tam=tamanho da reta
      * deltaX=calcula a distância entre os X's e divide pelo tam
      */
-    int tam,Delta_x, Delta_y;
+    int Delta_x, Delta_y;
     /* m = coeficiente angular da reta
      * x e y são posições que serão alteradas para desenhar a reta
      * e = cálculo de erro a cada iteração
      */
-    int i,x,y,m,new_e;
+    int i,x,y,new_e;
 
 public:
     //! construtor do objeto

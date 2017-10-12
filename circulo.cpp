@@ -33,14 +33,7 @@ void Circulo::draw(Screen &t)
             y1-=1;
         }
 
-        if(fill==1)
-        {
-            for(int i=(x+x1-raio);i<x+raio;i++)
-                for(int j=(y-raio);j<y+raio;j++)
-                    t.setPixel(i,j);
 
-
-        }
         t.setPixel(x+x1,y+y1);
         t.setPixel(x+x1,y-y1);
         t.setPixel(y1+x,x1+y);
@@ -50,8 +43,17 @@ void Circulo::draw(Screen &t)
         t.setPixel(x-y1,y-x1);
         t.setPixel(x-y1,x1+y);
 
-    }
+        if(fill==1)
+        {
+            int i,j;
+            for(i=x-raio+x1;i<x+raio;i++){
+                for(j=y-raio+x1;j<y+raio;j++)
+                    t.setPixel(i,j);
+            }
 
+        }
+    }
 }
+
 
 //http://www.demic.fee.unicamp.br/~jeff/ArquivosIndex/Bresenham

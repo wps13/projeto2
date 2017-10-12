@@ -15,20 +15,22 @@ int main()
     vector <FiguraGeometrica*> figuras;
 
     tela.setBrush('*');
+    /*
     tela.setPixel(8,7);
     cout<<tela<<endl;
     tela.clear();
     cout<<tela;
-
+*/
 
 
     //figuras.push_back(new Reta(8,8,19,19));
     //figuras.push_back(new Retangulo(10,10,2,5));
-    figuras.push_back(new Circulo(3,15,3,0));
-    figuras.push_back(new Circulo(3,7,3,1));
+    //figuras.push_back(new Circulo(3,15,3,0));
+    //figuras.push_back(new Circulo(3,7,3,1));
+    figuras.push_back(new Circulo(7,10,2,1));
 
     for(int i=0;i<figuras.size();i++){
-       figuras[i]->draw(tela);
+        figuras[i]->draw(tela);
     }
     cout<<tela;
     return 0;

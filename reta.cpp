@@ -6,10 +6,10 @@ using namespace std;
 
 /**
  * @brief Reta::Reta
- * @param _x0
- * @param _y0
- * @param _x1
- * @param _y1
+ * @param x1
+ * @param y1
+ * @param x2
+ * @param y2
  */
 Reta::Reta(int x1, int y1, int x2, int y2)
 {
@@ -19,7 +19,11 @@ Reta::Reta(int x1, int y1, int x2, int y2)
     this->x2=x2;
     this->y2=y2;
 }
-
+/**
+ * @brief Sinal
+ * @param x
+ * @return
+ */
 int Sinal(int x){
     if(x == 0)
         return 0;
@@ -28,10 +32,13 @@ int Sinal(int x){
     else
         return -1;
 }
-
+/**
+ * @brief Reta::draw
+ * @param t
+ */
 void Reta::draw(Screen &t)
 {    
-    int x, y, s1, s2,Troca,Temp;
+    int  s1, s2,Troca,Temp;
     x = x1;
     y = y1;
     Delta_x = abs(x2 - x1);
