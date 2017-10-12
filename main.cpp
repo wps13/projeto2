@@ -14,7 +14,8 @@
 using namespace std;
 
 int main()
-{
+{ 
+    /*
     ifstream entrada;
     string c;
     string s;
@@ -71,8 +72,8 @@ int main()
         cout << tela;
 
     }
+*/
 
-    /*
     Screen tela(20,20);
     vector <FiguraGeometrica*> figuras;
 
@@ -94,6 +95,13 @@ int main()
         figuras[i]->draw(tela);
     }
     cout<<tela;
-    */
+/*
+    ofstream saida;
+    string s;
+
+    saida.open("/saida.txt");
+
+    saida.write();
+*/
     return 0;
 }

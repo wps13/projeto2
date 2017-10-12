@@ -1,0 +1,73 @@
+\hypertarget{classCirculo}{}\section{Circulo Class Reference}
+\label{classCirculo}\index{Circulo@{Circulo}}
+
+
+Inheritance diagram for Circulo\+:
+% FIG 0
+
+
+Collaboration diagram for Circulo\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCirculo_ac49a96c1771d3e3dff84b38bf23a0862}{Circulo} (int x, int y, int r, int fill)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCirculo_ac49a96c1771d3e3dff84b38bf23a0862}{Circulo\+::\+Circulo}. \end{DoxyCompactList}\item 
+void \hyperlink{classCirculo_a593787d6e0618c2eded23e8839e7bea6}{draw} (\hyperlink{classScreen}{Screen} \&t)
+\begin{DoxyCompactList}\small\item\em Método para desenhar e preencher o circulo na tela. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCirculo_ac49a96c1771d3e3dff84b38bf23a0862}\label{classCirculo_ac49a96c1771d3e3dff84b38bf23a0862}} 
+\index{Circulo@{Circulo}!Circulo@{Circulo}}
+\index{Circulo@{Circulo}!Circulo@{Circulo}}
+\subsubsection{\texorpdfstring{Circulo()}{Circulo()}}
+{\footnotesize\ttfamily Circulo\+::\+Circulo (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{fill }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classCirculo_ac49a96c1771d3e3dff84b38bf23a0862}{Circulo\+::\+Circulo}. 
+
+construtor do circulo Inicia o objeto à partir do ponto inicial(x,y) e raio(r). Fill indica se o circulo deve ser preenchido com o caractere ou não
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em r} & \\
+\hline
+{\em fill} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCirculo_a593787d6e0618c2eded23e8839e7bea6}\label{classCirculo_a593787d6e0618c2eded23e8839e7bea6}} 
+\index{Circulo@{Circulo}!draw@{draw}}
+\index{draw@{draw}!Circulo@{Circulo}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Circulo\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classScreen}{Screen} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método para desenhar e preencher o circulo na tela. 
+
+\hyperlink{classCirculo_a593787d6e0618c2eded23e8839e7bea6}{Circulo\+::draw}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classFiguraGeometrica_a06404670d06d28d12f5f386901186925}{Figura\+Geometrica}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+circulo.\+h\item 
+circulo.\+cpp\end{DoxyCompactItemize}
