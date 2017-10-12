@@ -24,7 +24,7 @@ private:
 public:
     //! construtor da classe
     //! Inicializa a matriz com o número de linhas e colunas dados pelo usuário
-    Screen(int nlin, int ncol);
+    Screen(int nlin=1, int ncol=1);
 
     //! desenha um pixel da matriz usando o caratere guardado em 'brush'
     void setPixel(int x, int y);
