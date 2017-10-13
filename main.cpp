@@ -18,11 +18,13 @@ int main()
     Screen tela(20,20);
 
     ifstream entrada;
+    ofstream saida;
     string c;
     string s;
     stringstream ss;
 
-    entrada.open(" ");
+    entrada.open("C:/Users/D2/Downloads/figuras.txt");
+    saida.open("C:/Users/D2/Downloads/saida.txt");
 
     if(entrada.is_open()){
         cout << "abriu arquivo de entrada\n";
@@ -73,7 +75,7 @@ int main()
 
     }
 
-
+    saida << tela;
     vector <FiguraGeometrica*> figuras;
 
     tela.setBrush('*');
